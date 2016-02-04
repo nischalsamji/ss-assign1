@@ -3,5 +3,10 @@ import os
 
 ssh_files = ['/etc/hosts','~/.ssh/config','/etc/ssh/ssh_config','~/.ssh/authorized_keys','~/.ssh/known_hosts','/etc/ssh/ssh_known_hosts']
 for each_file in ssh_files:
-  file_content = read(each_file,"r")
-  print file_content.readlines()
+    try:
+        file_content = open(each_file,"r")
+        filecontent = file_content.readlines()
+        for each_line in filecontent:
+            print each_line
+    except IOError:
+        print each_file + " This file not found"
