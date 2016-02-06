@@ -7,6 +7,9 @@ for each_file in ssh_files:
         file_content = open(each_file,"r")
         filecontent = file_content.readlines()
         for each_line in filecontent:
-            print each_line
+            if each_line.starts_with("#"):
+                continue
+            else:
+                print each_line
     except IOError:
         print each_file + " This file not found"
