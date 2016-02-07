@@ -1,5 +1,5 @@
 import os
-
+#I really don wanna code today but just keeping my streak intact :/
 
 ssh_files = ['/etc/hosts','~/.ssh/config','/etc/ssh/ssh_config','~/.ssh/authorized_keys','~/.ssh/known_hosts','/etc/ssh/ssh_known_hosts']
 for each_file in ssh_files:
